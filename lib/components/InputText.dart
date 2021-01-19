@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-Widget InputText(BuildContext context, text, controller, IconData icon,
-    {isPassword = false, requireValidation = '', isEmail}) {
+Widget InputText(BuildContext context, text, controller,
+    {IconData icon, isPassword = false, requireValidation = '', isEmail}) {
   return Container(
     child: TextFormField(
       obscureText: isPassword,

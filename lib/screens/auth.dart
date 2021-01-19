@@ -2,7 +2,6 @@ import 'package:coopertransc/components/Button.dart';
 import 'package:coopertransc/components/InputText.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class AuthScreen extends StatefulWidget {
   @override
@@ -39,10 +38,12 @@ class _AuthScreenState extends State<AuthScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    InputText(context, "CPF", txtCpf, Icons.mail),
-                    InputText(context, "Senha", txtPassword, Icons.assessment,
-                        isPassword: true),
-                    Button("Entrar", context)
+                    InputText(context, "CPF", txtCpf, icon: Icons.access_alarm),
+                    InputText(context, "Senha", txtPassword,
+                        icon: Icons.assessment, isPassword: true),
+                    Button("Entrar", context, action: () {
+                      Navigator.pushNamed(context, "/main");
+                    })
                   ],
                 ),
               )
