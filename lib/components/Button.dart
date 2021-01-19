@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-Widget Button(rotulo, BuildContext context,
-    {Widget page, funcao, formKey, requireValidation, action}) {
+Widget button(rotulo, BuildContext context,
+    {page, funcao, formKey, requireValidation, action}) {
   return Container(
       padding: EdgeInsets.only(top: 15),
       child: RaisedButton(

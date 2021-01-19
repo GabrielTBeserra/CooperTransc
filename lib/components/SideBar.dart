@@ -1,4 +1,5 @@
 import 'package:coopertransc/components/ListItem.dart';
+import 'package:coopertransc/models/notice.dart';
 import 'package:coopertransc/screens/Notices.dart';
 import 'package:coopertransc/screens/Turn.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,8 @@ Widget SideBar(context, ref) {
           decoration: BoxDecoration(color: Theme.of(context).primaryColor),
         ),
         ListItem(context, "Noticias", () {
-          ref = Notices(context);
+          print("asdasdasd");
+          //ref = notices(context);
         }),
         ListItem(context, "Vez", () {
           ref = Turn(context);

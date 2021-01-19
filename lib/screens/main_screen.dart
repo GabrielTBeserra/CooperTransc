@@ -2,21 +2,22 @@ import 'package:coopertransc/components/ListItem.dart';
 import 'package:coopertransc/screens/Notices.dart';
 import 'package:coopertransc/screens/Turn.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class MainScreen extends StatefulWidget {
-  MainScreen({Key key}) : super(key: key);
-
   @override
   _MainScreenState createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
   var bodyWidget;
+  var titleBar;
 
   @override
   void initState() {
     super.initState();
-    bodyWidget = Notices(context);
+    bodyWidget = notices(context);
+    titleBar = "Avisos";
   }
 
   @override
@@ -25,7 +26,7 @@ class _MainScreenState extends State<MainScreen> {
       child: Scaffold(
         body: bodyWidget,
         appBar: AppBar(
-          title: Text("Avisos"),
+          title: Text(titleBar),
         ),
         drawer: Drawer(
           child: ListView(
@@ -44,14 +45,16 @@ class _MainScreenState extends State<MainScreen> {
                 decoration:
                     BoxDecoration(color: Theme.of(context).primaryColor),
               ),
-              ListItem(context, "teste", () {
+              ListItem(context, "Avisos", () {
                 setState(() {
-                  bodyWidget = Notices(context);
+                  bodyWidget = notices(context);
+                  titleBar = "Avisos";
                 });
               }),
               ListItem(context, "Vez", () {
                 setState(() {
                   bodyWidget = Turn(context);
+                  titleBar = "Vez";
                 });
               })
             ],
