@@ -1,8 +1,7 @@
 import 'package:coopertransc/components/ListItem.dart';
-import 'package:coopertransc/screens/Notices.dart';
+import 'package:coopertransc/screens/notices_screen.dart';
 import 'package:coopertransc/screens/Turn.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -16,7 +15,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     super.initState();
-    bodyWidget = notices(context);
+    bodyWidget = NoticesScreen();
     titleBar = "Avisos";
   }
 
@@ -47,15 +46,17 @@ class _MainScreenState extends State<MainScreen> {
               ),
               ListItem(context, "Avisos", () {
                 setState(() {
-                  bodyWidget = notices(context);
+                  bodyWidget = NoticesScreen();
                   titleBar = "Avisos";
                 });
+                Navigator.pop(context);
               }),
-              ListItem(context, "Vez", () {
+              ListItem(context, "Vez", () async {
                 setState(() {
                   bodyWidget = Turn(context);
                   titleBar = "Vez";
                 });
+                Navigator.pop(context);
               })
             ],
           ),
