@@ -44,18 +44,26 @@ class Notice {
 
 Widget noticeItem(item) {
   return Container(
+    decoration: BoxDecoration(border: Border.all(color: Colors.black)),
     padding: EdgeInsets.fromLTRB(15, 5, 15, 50),
     child: Column(
       children: [
         Container(
           child: Text(
             item.title.toUpperCase(),
-            style: TextStyle(fontSize: 25, backgroundColor: Colors.yellow),
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 25,
+              backgroundColor: Colors.yellow,
+            ),
           ),
         ),
         Container(
           padding: EdgeInsets.only(top: 5),
-          child: Text(item.notice),
+          child: Text(
+            item.notice,
+            textAlign: TextAlign.justify,
+          ),
         )
       ],
     ),

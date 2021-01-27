@@ -1,12 +1,8 @@
 {
     "notices": [
         {
-            "title": "teste title1",
-            "notice": "teste notice1"
-        },
-        {
-            "title": "teste title2",
-            "notice": "teste notice2\nasndoasd\nokiasndoasnd\noiansdoiasd"
+            "title": "ATENÇÃO SRS. COOPERADOS PARA AS NOVAS DATAS DE PAGAMENTOS DOS SALDOS DE FRETES:",
+            "notice": "Devido ao atual momento em que estamos passando (epidemia do Coronavirus), bem como o cenário econômico que virá pela frente, buscando ajudar o nosso cooperado e entendendo a sua situção diante de todos os acontecimentos, a diretoria RESOLVEU alterar as datas para pagamento do saldo, antecipando-o. Segue abaixo o novo cronorgrama de pagamento:\n\n- Descargas realizadas entre o período de 05 a 14: Recebem dia 15;\n\n- Descargas realizadas entre o período de 15 a 24: Recebem dia 25;\n\n- Descargas realizadas entre o período de 25 a 04: Recebem dia 05.\n\nTODOS OS PAGAMENTOS SERÃO REALIZADOS NA PARTE DA TARDE. "
         },
         {
             "title": "teste title3",
