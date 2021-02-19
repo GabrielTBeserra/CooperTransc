@@ -1,6 +1,7 @@
 import 'package:coopertransc/components/ListItem.dart';
 import 'package:coopertransc/screens/notices_screen.dart';
 import 'package:coopertransc/screens/Turn.dart';
+import 'package:coopertransc/screens/tracking.dart';
 import 'package:coopertransc/screens/travels.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +17,8 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     super.initState();
-    //bodyWidget = NoticesScreen();
-    bodyWidget = TravelsScreen();
+    bodyWidget = NoticesScreen();
+    //bodyWidget = Turn(context);
     titleBar = "Avisos";
   }
 
@@ -68,7 +69,13 @@ class _MainScreenState extends State<MainScreen> {
                 Navigator.pop(context);
               }),
               ListItem(context, "Minhas Viagens", () async {}),
-              ListItem(context, "Rastreamento", () async {}),
+              /*ListItem(context, "Rastreamento", () async {
+                setState(() {
+                  bodyWidget = Tracking(context);
+                  titleBar = "Rastreamento";
+                });
+                Navigator.pop(context);
+              }),*/
               ListItem(context, "Senha", () async {}),
               ListItem(context, "Sair", () async {}),
             ],
