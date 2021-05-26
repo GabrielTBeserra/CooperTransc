@@ -1,4 +1,5 @@
 import 'package:coopertransc/components/ListItem.dart';
+import 'package:coopertransc/screens/my_travels.dart';
 import 'package:coopertransc/screens/notices_screen.dart';
 import 'package:coopertransc/screens/Turn.dart';
 import 'package:coopertransc/screens/tracking.dart';
@@ -17,8 +18,8 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     super.initState();
-    bodyWidget = NoticesScreen();
-    //bodyWidget = Turn(context);
+    //bodyWidget = NoticesScreen();
+    bodyWidget = MYTravels();
     titleBar = "Avisos";
   }
 
@@ -26,6 +27,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
+        backgroundColor: Theme.of(context).backgroundColor,
         body: bodyWidget,
         appBar: AppBar(
           title: Text(titleBar),
@@ -68,7 +70,13 @@ class _MainScreenState extends State<MainScreen> {
                 });
                 Navigator.pop(context);
               }),
-              ListItem(context, "Minhas Viagens", () async {}),
+              ListItem(context, "Minhas Viagens", () async {
+                setState(() {
+                  bodyWidget = MYTravels();
+                  titleBar = "Minhas Viagens";
+                });
+                Navigator.pop(context);
+              }),
               /*ListItem(context, "Rastreamento", () async {
                 setState(() {
                   bodyWidget = Tracking(context);
